@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Desafio Prothera — Funcionários</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <header class="header">
+      <p class="eyebrow">Desafio Prothera</p>
+      <h1>Resultados dos funcionários</h1>
+      <p class="subtitle">Os dados vêm do backend Java. O JavaScript só desenha as abas.</p>
+      <p id="aviso" class="aviso" hidden></p>
+    </header>
+
+    <div class="tabs" role="tablist" aria-label="Resultados">
+      <button class="tab is-active" role="tab" aria-selected="true" data-tab="lista">Lista</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="aumento">Aumento 10%</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="funcao">Por função</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="aniversario">Aniversariantes</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="idade">Por idade</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="alfabetica">Alfabética</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="soma">Soma</button>
+      <button class="tab" role="tab" aria-selected="false" data-tab="minimo">Salário mínimo</button>
+    </div>
+
+    <section id="lista" class="panel is-active" role="tabpanel">
+      <h2>Lista após remover João</h2>
+      <p class="hint">Nome, data de nascimento, função e salário original.</p>
+      <div class="table-wrap" id="tabela-lista"></div>
+    </section>
+
+    <section id="aumento" class="panel" role="tabpanel" hidden>
+      <h2>Salários com aumento de 10%</h2>
+      <p class="hint">Mesmos funcionários, salário reajustado.</p>
+      <div class="table-wrap" id="tabela-aumento"></div>
+    </section>
+
+    <section id="funcao" class="panel" role="tabpanel" hidden>
+      <h2>Agrupados por função</h2>
+      <p class="hint">Chave = função, valor = lista de funcionários.</p>
+      <div id="grupos-funcao"></div>
+    </section>
+
+    <section id="aniversario" class="panel" role="tabpanel" hidden>
+      <h2>Aniversariantes de outubro a dezembro</h2>
+      <div class="table-wrap" id="tabela-aniversario"></div>
+    </section>
+
+    <section id="idade" class="panel" role="tabpanel" hidden>
+      <h2>Do mais velho para o mais novo</h2>
+      <div class="table-wrap" id="tabela-idade"></div>
+    </section>
+
+    <section id="alfabetica" class="panel" role="tabpanel" hidden>
+      <h2>Ordem alfabética</h2>
+      <div class="table-wrap" id="tabela-alfabetica"></div>
+    </section>
+
+    <section id="soma" class="panel" role="tabpanel" hidden>
+      <h2>Soma dos salários</h2>
+      <p class="hint">Total após o aumento de 10%.</p>
+      <p class="total" id="soma-salarios"></p>
+    </section>
+
+    <section id="minimo" class="panel" role="tabpanel" hidden>
+      <h2>Equivalência ao salário mínimo</h2>
+      <p class="hint" id="hint-minimo">Salário mínimo considerado pelo Java.</p>
+      <div class="table-wrap" id="tabela-minimo"></div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
